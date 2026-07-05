@@ -6,7 +6,7 @@
 <title>Saudosa Praça Onze | Lançamento Cury no Centro do Rio — Studios e Aptos a partir de R$ 290 mil</title>
 <meta name="description" content="Novo lançamento Cury na Praça Onze, Centro do Rio. Studio, 1 e 2 quartos a partir de R$ 290 mil. Financiamento Minha Casa Minha Vida, a 300m do Metrô. Rooftop panorâmico e lazer completo. Fale com especialista.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://jorn4da.github.io/praca11/">
+<link rel="canonical" href="https://jorn4da.github.io/Praca-XI/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -116,6 +116,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.92);backdrop-f
 .hist-grid p{margin-top:14px}
 @media(max-width:860px){.hist-grid{grid-template-columns:1fr}}
 
+/* Vídeo */
+.video{background:var(--ink);color:#fff;text-align:center}
+.video .h2{color:#fff}
+.video-frame{position:relative;max-width:860px;margin:38px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.5);aspect-ratio:16/9;background:#000}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
 /* Tipologias */
 .tips{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}
 .tip{border:1px solid #e6e2d8;border-radius:16px;padding:26px 22px;background:#fff;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
@@ -153,6 +159,20 @@ header{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.92);backdrop-f
 .mapa iframe{width:100%;height:100%;min-height:380px;border:0}
 @media(max-width:860px){.loc-grid{grid-template-columns:1fr}}
 
+/* Futuro da região */
+.futuro{background:var(--ink);color:#d9dce1}
+.futuro .h2{color:#fff}
+.fut-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.fut{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:26px;display:flex;flex-direction:column}
+.fut .num{font-family:var(--ff-h);font-weight:900;font-size:.78rem;letter-spacing:.12em;color:var(--gold-l);margin-bottom:12px}
+.fut b{display:block;font-family:var(--ff-h);color:#fff;font-size:1.05rem;margin-bottom:10px}
+.fut p{font-size:.92rem;color:#b8bdc5;flex:1}
+.fut a{margin-top:14px;font-size:.78rem;color:var(--gold-l);text-decoration:none;font-weight:600}
+.fut a:hover{text-decoration:underline}
+.fut-note{margin-top:26px;background:rgba(201,154,59,.12);border:1px solid rgba(201,154,59,.35);border-radius:12px;padding:18px 22px;font-size:.92rem}
+.fut-note b{color:var(--gold-l)}
+@media(max-width:960px){.fut-grid{grid-template-columns:1fr}}
+
 /* Investimento */
 .invest{background:var(--cream)}
 .inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
@@ -161,6 +181,27 @@ header{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.92);backdrop-f
 .inv p{font-size:.92rem;color:#555}
 .check{color:var(--wa-d);font-weight:900;margin-right:6px}
 @media(max-width:860px){.inv-grid{grid-template-columns:1fr}}
+
+/* Formulário de cadastro */
+.lead{background:var(--cream)}
+.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:38px}
+.lead-benef ul{list-style:none;display:grid;gap:14px;margin-top:8px}
+.lead-benef li{display:flex;gap:10px;font-size:.98rem}
+.lead-benef li b{color:var(--ink)}
+.form-card{background:#fff;border-radius:18px;padding:30px 28px;box-shadow:0 24px 60px rgba(13,17,23,.14);border-top:5px solid var(--gold)}
+.form-card h3{font-family:var(--ff-h);color:var(--ink);font-size:1.25rem;line-height:1.25}
+.form-card .fs{font-size:.85rem;color:var(--mut);margin:8px 0 20px}
+.fg{margin-bottom:14px;text-align:left}
+.fg label{display:block;font-size:.78rem;font-weight:700;color:var(--ink);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.fg input,.fg select{width:100%;padding:13px 14px;border:1.5px solid #dcd6c8;border-radius:10px;font-family:var(--ff-b);font-size:.95rem;background:#fff;color:var(--txt);appearance:auto}
+.fg input:focus,.fg select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,154,59,.18)}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-card .btn{width:100%;justify-content:center;border:none;cursor:pointer;font-size:.98rem}
+.lgpd{font-size:.72rem;color:var(--mut);margin-top:12px;text-align:center;line-height:1.5}
+.lgpd a{color:var(--mut)}
+.form-card--dark{max-width:480px;margin:36px auto 0;text-align:center}
+@media(max-width:860px){.lead-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.fg-row{grid-template-columns:1fr}.form-card{padding:24px 18px}}
 
 /* Autoridade */
 .auth{background:var(--ink);color:#d9dce1}
@@ -204,6 +245,59 @@ footer .wrap{display:grid;gap:14px}
   .stickycta .btn{padding:11px 18px;font-size:.85rem;box-shadow:none}
   .zap-float{bottom:78px}
   body{padding-bottom:64px}
+}
+
+/* ===== Distribuição refinada por dispositivo ===== */
+/* Tablet paisagem / iPad Pro (até 1024px) */
+@media(max-width:1024px){
+  section{padding:56px 0}
+  .tips{grid-template-columns:repeat(2,1fr)}
+  .inv-grid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{max-width:660px}
+}
+/* iPad retrato / tablet (até 860px) */
+@media(max-width:860px){
+  .hist-grid{gap:30px}
+  .hist-grid img{order:-1;max-height:340px;width:100%;object-fit:cover}
+  .loc-grid{gap:26px}
+  .mapa,.mapa iframe{min-height:320px}
+  .auth .wrap{text-align:left}
+  .gal figcaption{font-size:.78rem;padding:20px 10px 10px}
+}
+/* Celular grande (até 640px) */
+@media(max-width:640px){
+  section{padding:44px 0}
+  .topbar{font-size:.72rem;padding:7px 10px}
+  .hd .btn{font-size:.78rem;padding:9px 14px}
+  .logo{font-size:.9rem}
+  .hero{min-height:auto}
+  .hero .wrap{padding:66px 0 54px}
+  .hero p{font-size:1rem}
+  .trust{gap:8px}
+  .trust span{font-size:.72rem;padding:6px 12px}
+  .stats{padding:20px 0}
+  .stats .wrap{gap:12px}
+  .tips{grid-template-columns:1fr}
+  .tip{padding:22px 20px}
+  .inv-grid{grid-template-columns:1fr;gap:14px}
+  .inv{padding:22px}
+  .auth-badge{width:104px;height:104px;font-size:1.3rem}
+  .video-frame{border-radius:12px}
+  .faq summary{padding:15px 16px;font-size:.92rem}
+  .faq details p{padding:0 16px 16px}
+  .garantia{padding:16px 18px;font-size:.82rem}
+  .hero .btn,.final .btn,.historia .btn,.video .btn{width:100%;max-width:400px;justify-content:center;text-align:center}
+}
+/* Celular pequeno (até 480px) */
+@media(max-width:480px){
+  .gal{grid-template-columns:1fr;gap:10px}
+  .gal figure{aspect-ratio:16/10}
+  .hero h1{font-size:1.72rem}
+  .h2{font-size:1.45rem}
+  .amen span{font-size:.74rem;padding:6px 11px}
+  .stats b{font-size:1.15rem}
+  .stats i{font-size:.72rem}
+  .btn{font-size:.92rem;padding:14px 20px}
 }
 </style>
 </head>
@@ -275,6 +369,19 @@ footer .wrap{display:grid;gap:14px}
   </div>
 </section>
 
+<!-- VÍDEO -->
+<section class="video" id="video">
+  <div class="wrap">
+    <span class="k">Apresentação oficial</span>
+    <h2 class="h2">Assista: o Saudosa Praça Onze em 2 minutos.</h2>
+    <div class="video-frame">
+      <iframe src="https://drive.google.com/file/d/1RwHsagz5uoKFyIkP_d7rTKi3ciLzpNoT/preview" title="Vídeo de apresentação do Saudosa Praça Onze" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <p style="margin-top:28px"><a class="btn" href="https://wa.me/message/AMKKLD5NLFKAM1" target="_blank" rel="noopener">Gostei — quero a tabela e as plantas</a></p>
+    <span class="micro" style="color:#c9cdd4">Receba o material completo no WhatsApp em minutos.</span>
+  </div>
+</section>
+
 <!-- TIPOLOGIAS -->
 <section id="tipologias">
   <div class="wrap">
@@ -287,31 +394,98 @@ footer .wrap{display:grid;gap:14px}
         <div class="m2">32,27 m² · com varanda</div>
         <div class="preco">R$ 290.000</div>
         <div class="aval">Avaliação: R$ 350.000 <s>(+R$ 60 mil)</s></div>
-        <a href="https://wa.me/message/AMKKLD5NLFKAM1" target="_blank" rel="noopener">Simular parcelas →</a>
+        <a href="#cadastro" class="tip-cta" data-tip="Studio — R$ 290 mil">Simular parcelas →</a>
       </div>
       <div class="tip">
         <h3>1 Quarto</h3>
         <div class="m2">32 m² · com varanda</div>
         <div class="preco">R$ 295.000</div>
         <div class="aval">Financia no MCMV</div>
-        <a href="https://wa.me/message/AMKKLD5NLFKAM1" target="_blank" rel="noopener">Simular parcelas →</a>
+        <a href="#cadastro" class="tip-cta" data-tip="1 Quarto — R$ 295 mil">Simular parcelas →</a>
       </div>
       <div class="tip tip--hot">
         <h3>2 Quartos</h3>
         <div class="m2">38,3 m² · com varanda</div>
         <div class="preco">R$ 335.000</div>
         <div class="aval">Financia no MCMV</div>
-        <a href="https://wa.me/message/AMKKLD5NLFKAM1" target="_blank" rel="noopener">Simular parcelas →</a>
+        <a href="#cadastro" class="tip-cta" data-tip="2 Quartos — R$ 335 mil">Simular parcelas →</a>
       </div>
       <div class="tip">
         <h3>2 Quartos c/ Suíte</h3>
         <div class="m2">49 m² · suíte e varanda</div>
         <div class="preco">R$ 435.000</div>
         <div class="aval">Avaliação: R$ 514.000 <s>(+R$ 79 mil)</s></div>
-        <a href="https://wa.me/message/AMKKLD5NLFKAM1" target="_blank" rel="noopener">Simular parcelas →</a>
+        <a href="#cadastro" class="tip-cta" data-tip="2 Quartos c/ Suíte — R$ 435 mil">Simular parcelas →</a>
       </div>
     </div>
     <p style="margin-top:22px;font-size:.8rem;color:var(--mut)">Valores da tabela de lançamento, sujeitos a alteração sem aviso prévio. Avaliações de referência informadas pela incorporadora.</p>
+  </div>
+</section>
+
+<!-- CADASTRO / FORMULÁRIO PRINCIPAL -->
+<section class="lead" id="cadastro">
+  <div class="wrap">
+    <span class="k">Condição de lançamento</span>
+    <h2 class="h2">Cadastre-se e receba a tabela completa antes da virada de preço.</h2>
+    <div class="lead-grid">
+      <div class="lead-benef">
+        <p class="sub" style="margin-top:0">Ao se cadastrar, você recebe no WhatsApp e no e-mail:</p>
+        <ul>
+          <li><span class="check">✓</span><span><b>Tabela de lançamento completa</b> — valores e condições de todas as unidades</span></li>
+          <li><span class="check">✓</span><span><b>Plantas de todas as tipologias</b> — Studio, 1 e 2 quartos com suíte</span></li>
+          <li><span class="check">✓</span><span><b>Simulação personalizada gratuita</b> — MCMV, FGTS e subsídio para o seu perfil (valor real: R$ 800 — incluso)</span></li>
+          <li><span class="check">✓</span><span><b>Prioridade de atendimento</b> — cadastrados falam primeiro com o especialista e escolhem unidade antes</span></li>
+        </ul>
+      </div>
+      <form class="form-card lead-form" action="https://formsubmit.co/imoveisjornada@gmail.com" method="POST">
+        <h3>Quero a tabela e a simulação gratuita</h3>
+        <p class="fs">Leva menos de 30 segundos. Sem compromisso.</p>
+        <!-- Configuração FormSubmit -->
+        <input type="hidden" name="_subject" value="🔥 NOVO LEAD — Saudosa Praça Onze (Cury)">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://jorn4da.github.io/Praca-XI/obrigado.html">
+        <input type="hidden" name="Projeto" value="Saudosa Praça Onze — Cury | R. Benedito Hipólito, 160 - Praça Onze/RJ | A partir de R$ 290 mil | MCMV">
+        <input type="hidden" name="Origem" value="Landing Page — formulário pós-tipologias">
+        <div class="fg">
+          <label for="nome1">Nome completo</label>
+          <input type="text" id="nome1" name="Nome" placeholder="Seu nome" required autocomplete="name">
+        </div>
+        <div class="fg-row">
+          <div class="fg">
+            <label for="tel1">WhatsApp / Telefone</label>
+            <input type="tel" id="tel1" name="Telefone" placeholder="(21) 99999-9999" required autocomplete="tel" inputmode="tel">
+          </div>
+          <div class="fg">
+            <label for="email1">E-mail</label>
+            <input type="email" id="email1" name="Email" placeholder="seu@email.com" required autocomplete="email">
+          </div>
+        </div>
+        <div class="fg-row">
+          <div class="fg">
+            <label for="tip1">Tipologia de interesse</label>
+            <select id="tip1" name="Tipologia" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Studio — R$ 290 mil</option>
+              <option>1 Quarto — R$ 295 mil</option>
+              <option>2 Quartos — R$ 335 mil</option>
+              <option>2 Quartos c/ Suíte — R$ 435 mil</option>
+              <option>Ainda não sei / quero orientação</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label for="cond1">Condição de compra</label>
+            <select id="cond1" name="Condicao de Compra" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Financiamento (MCMV / bancário)</option>
+              <option>À vista</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn" type="submit">Receber tabela + simulação gratuita</button>
+        <p class="lgpd">🔒 Seus dados estão protegidos (LGPD) e são usados apenas para este atendimento. <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a></p>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -321,15 +495,15 @@ footer .wrap{display:grid;gap:14px}
     <span class="k">Lazer completo &amp; serviços</span>
     <h2 class="h2">Um clube dentro de casa — do rooftop panorâmico ao mercadinho no térreo.</h2>
     <div class="gal">
-      <figure><img src="https://lh3.googleusercontent.com/d/1_6OnPbAmGbPKwq4qw2uNq3MtlLoiziq9=w900" alt="Fachada do Saudosa Praça Onze" loading="lazy" data-fbid="1_6OnPbAmGbPKwq4qw2uNq3MtlLoiziq9"><figcaption>Fachada</figcaption></figure>
       <figure><img src="https://lh3.googleusercontent.com/d/1E5c-OVbPG3sU_VbUc5WQ_SqJDbA8Ud4a=w900" alt="Rooftop panorâmico" loading="lazy" data-fbid="1E5c-OVbPG3sU_VbUc5WQ_SqJDbA8Ud4a"><figcaption>Rooftop panorâmico</figcaption></figure>
       <figure><img src="https://lh3.googleusercontent.com/d/1j6GRSrO8-SaHzPI7L8KozpQGRaGJKQHS=w900" alt="Piscina adulto e infantil" loading="lazy" data-fbid="1j6GRSrO8-SaHzPI7L8KozpQGRaGJKQHS"><figcaption>Piscina adulto e infantil</figcaption></figure>
       <figure><img src="https://lh3.googleusercontent.com/d/16Yg8qLjQ2nVr7jI_1Px_k1EnbG08eHU4=w900" alt="Churrasqueira gourmet com forno de pizza" loading="lazy" data-fbid="16Yg8qLjQ2nVr7jI_1Px_k1EnbG08eHU4"><figcaption>Churrasqueira gourmet c/ forno de pizza</figcaption></figure>
       <figure><img src="https://lh3.googleusercontent.com/d/1OPQDZ-rx4AGQ5frrV-uwTDIEahfDcA5y=w900" alt="Lounge" loading="lazy" data-fbid="1OPQDZ-rx4AGQ5frrV-uwTDIEahfDcA5y"><figcaption>Lounge</figcaption></figure>
       <figure><img src="https://lh3.googleusercontent.com/d/1-GEh5SIQGwXlx7ir1cUELUL93M56ktu7=w900" alt="Fitness" loading="lazy" data-fbid="1-GEh5SIQGwXlx7ir1cUELUL93M56ktu7"><figcaption>Fitness</figcaption></figure>
       <figure><img src="https://lh3.googleusercontent.com/d/1YBsNcw9pTEjoOBC2al20x3iulEQFimeF=w900" alt="Salão de festas" loading="lazy" data-fbid="1YBsNcw9pTEjoOBC2al20x3iulEQFimeF"><figcaption>Salão de festas</figcaption></figure>
-      <figure><img src="https://lh3.googleusercontent.com/d/1S0Q89QuG8_mOisqmRTmxJgCB0He_e3DZ=w900" alt="Portaria 24 horas" loading="lazy" data-fbid="1S0Q89QuG8_mOisqmRTmxJgCB0He_e3DZ"><figcaption>Portaria 24h</figcaption></figure>
       <figure><img src="https://lh3.googleusercontent.com/d/1-233L7obpBR4m6J2jH3_1MfQd2R-_vl6=w900" alt="Mercadinho" loading="lazy" data-fbid="1-233L7obpBR4m6J2jH3_1MfQd2R-_vl6"><figcaption>Mercadinho</figcaption></figure>
+      <figure><img src="https://lh3.googleusercontent.com/d/1S79HLCIcYoj0OzurFnUkH4YdjybpaEHL=w900" alt="Playground" loading="lazy" data-fbid="1S79HLCIcYoj0OzurFnUkH4YdjybpaEHL"><figcaption>Playground</figcaption></figure>
+      <figure><img src="https://lh3.googleusercontent.com/d/1PpwWySIdY6A1COr8Lj_gXJC39JMVB1TK=w900" alt="Brinquedoteca" loading="lazy" data-fbid="1PpwWySIdY6A1COr8Lj_gXJC39JMVB1TK"><figcaption>Brinquedoteca</figcaption></figure>
     </div>
     <div class="amen">
       <span>Portaria 24h</span><span>Lavanderia</span><span>Home Office</span><span>Central Delivery</span><span>Salão de Jogos</span><span>Playground</span><span>Brinquedoteca</span><span>PET Place</span><span>Fitness Externo</span><span>Bicicletário 500 vagas</span><span>Estar Externo</span><span>Áreas comuns entregues equipadas e decoradas</span>
@@ -362,6 +536,39 @@ footer .wrap{display:grid;gap:14px}
   </div>
 </section>
 
+<!-- FUTURO DA REGIÃO / PRAÇA ONZE MARAVILHA -->
+<section class="futuro" id="futuro">
+  <div class="wrap">
+    <span class="k">Praça Onze Maravilha · Plano da Prefeitura do Rio</span>
+    <h2 class="h2">A região vai receber o mesmo tratamento que transformou o Porto Maravilha.</h2>
+    <p class="sub" style="color:#b8bdc5">Você não precisa acreditar na nossa palavra: o projeto é oficial, já foi apresentado pela Prefeitura e está na imprensa. Quem compra antes das obras, compra antes da valorização.</p>
+    <div class="fut-grid">
+      <div class="fut">
+        <div class="num">PROJETO 01</div>
+        <b>Novo Sambódromo + Museu do Samba</b>
+        <p>Revitalização completa da Passarela do Samba e construção do Museu do Samba atrás da Praça da Apoteose — a poucos passos do empreendimento, que fica ao lado da Marquês de Sapucaí.</p>
+        <a href="https://prefeitura.rio/noticias/prefeitura-do-rio-apresenta-projeto-ambicioso-nos-moldes-do-porto-maravilha-para-a-regiao-do-sambodromo/" target="_blank" rel="noopener">Fonte: Prefeitura do Rio →</a>
+      </div>
+      <div class="fut">
+        <div class="num">PROJETO 02</div>
+        <b>Boulevard do Samba</b>
+        <p>O Elevado 31 de Março será demolido e dará lugar a uma nova via no nível do chão, com calçadas largas e lojas, ligando o Santo Cristo ao Túnel Santa Bárbara — com mergulhão sob a linha do trem. Mais comércio, mais vida de rua, mais valorização.</p>
+        <a href="https://diariodorio.com/revitalizacao-do-sambodromo-prefeitura-do-rio-aposta-em-autofinanciamento-para-transformar-a-regiao/" target="_blank" rel="noopener">Fonte: Diário do Rio →</a>
+      </div>
+      <div class="fut">
+        <div class="num">PROJETO 03</div>
+        <b>Biblioteca dos Saberes</b>
+        <p>Novo equipamento cultural na região do Terreirão do Samba, assinado por Francis Kéré — vencedor do Pritzker, o "Oscar da arquitetura mundial". Arquitetura de nível internacional a minutos da sua porta.</p>
+        <a href="https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/11/20/praca-onze-maravilha-conheca-o-projeto.ghtml" target="_blank" rel="noopener">Fonte: G1 →</a>
+      </div>
+    </div>
+    <div class="fut-note">
+      <b>O que isso significa para quem compra agora:</b> no Porto Maravilha, quem comprou antes da revitalização viu o metro quadrado disparar depois das obras. O Saudosa Praça Onze chega antes desse ciclo — com studio a R$ 290 mil numa região que a própria Prefeitura quer transformar.
+    </div>
+    <p style="margin-top:28px;text-align:center"><a class="btn btn--gold" href="#cadastro">Quero comprar antes da valorização</a></p>
+  </div>
+</section>
+
 <!-- INVESTIMENTO -->
 <section class="invest">
   <div class="wrap">
@@ -369,7 +576,7 @@ footer .wrap{display:grid;gap:14px}
     <h2 class="h2">Investimento inteligente: 6 motivos para entrar na tabela de lançamento.</h2>
     <div class="inv-grid">
       <div class="inv"><b><span class="check">✓</span>Valorização embutida</b><p>Studio a R$ 290 mil com avaliação de R$ 350 mil. A diferença já é sua no dia da assinatura.</p></div>
-      <div class="inv"><b><span class="check">✓</span>Mais barato que o Porto</b><p>Mesma centralidade das regiões vizinhas revitalizadas, com preço de entrada muito menor.</p></div>
+      <div class="inv"><b><span class="check">✓</span>Mais barato que o Porto</b><p>Mesma centralidade do Porto Maravilha, preço de entrada muito menor — e agora com plano oficial de revitalização nos mesmos moldes.</p></div>
       <div class="inv"><b><span class="check">✓</span>Financiamento MCMV</b><p>Subsídio, FGTS na entrada e as menores taxas do mercado para quem se enquadra no programa.</p></div>
       <div class="inv"><b><span class="check">✓</span>Demanda reprimida</b><p>Região sem lançamentos há muitos anos, cercada de órgãos públicos e empresas — inquilino garantido.</p></div>
       <div class="inv"><b><span class="check">✓</span>Renda com aluguel</b><p>Studios perto de metrô no Centro têm alta liquidez para locação tradicional e por temporada.</p></div>
@@ -433,6 +640,54 @@ footer .wrap{display:grid;gap:14px}
       Garantir minha condição de lançamento
     </a>
     <span class="micro" style="color:#c9cdd4">Atendimento gratuito · Resposta rápida · Sem compromisso</span>
+
+    <form class="form-card form-card--dark lead-form" action="https://formsubmit.co/imoveisjornada@gmail.com" method="POST">
+      <h3>Prefere receber por e-mail e WhatsApp? Cadastre-se:</h3>
+      <input type="hidden" name="_subject" value="🔥 NOVO LEAD — Saudosa Praça Onze (Cury)">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://jorn4da.github.io/Praca-XI/obrigado.html">
+      <input type="hidden" name="Projeto" value="Saudosa Praça Onze — Cury | R. Benedito Hipólito, 160 - Praça Onze/RJ | A partir de R$ 290 mil | MCMV">
+      <input type="hidden" name="Origem" value="Landing Page — formulário CTA final">
+      <div class="fg">
+        <label for="nome2">Nome completo</label>
+        <input type="text" id="nome2" name="Nome" placeholder="Seu nome" required autocomplete="name">
+      </div>
+      <div class="fg-row">
+        <div class="fg">
+          <label for="tel2">WhatsApp / Telefone</label>
+          <input type="tel" id="tel2" name="Telefone" placeholder="(21) 99999-9999" required autocomplete="tel" inputmode="tel">
+        </div>
+        <div class="fg">
+          <label for="email2">E-mail</label>
+          <input type="email" id="email2" name="Email" placeholder="seu@email.com" required autocomplete="email">
+        </div>
+      </div>
+      <div class="fg-row">
+        <div class="fg">
+          <label for="tip2">Tipologia de interesse</label>
+          <select id="tip2" name="Tipologia" required>
+            <option value="" disabled selected>Selecione</option>
+            <option>Studio — R$ 290 mil</option>
+            <option>1 Quarto — R$ 295 mil</option>
+            <option>2 Quartos — R$ 335 mil</option>
+            <option>2 Quartos c/ Suíte — R$ 435 mil</option>
+            <option>Ainda não sei / quero orientação</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="cond2">Condição de compra</label>
+          <select id="cond2" name="Condicao de Compra" required>
+            <option value="" disabled selected>Selecione</option>
+            <option>Financiamento (MCMV / bancário)</option>
+            <option>À vista</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn--gold" type="submit">Garantir prioridade no lançamento</button>
+      <p class="lgpd" style="color:#a8b0bc">🔒 Dados protegidos (LGPD). <a href="politica-de-privacidade.html" target="_blank" style="color:#a8b0bc">Política de Privacidade</a></p>
+    </form>
+
     <div class="garantia">
       <b>🛡 Compromisso sem risco:</b> clicar não significa assinar nada. Você recebe as informações, tira as dúvidas e decide no seu tempo. Sem urgência falsa, sem 10 ligações por dia.
     </div>
@@ -443,7 +698,7 @@ footer .wrap{display:grid;gap:14px}
   <div class="wrap">
     <div><b>Saudosa Praça Onze</b> — Realização e construção: Cury Construtora e Incorporadora S/A · R. Benedito Hipólito, 160 — Praça Onze, Rio de Janeiro/RJ.</div>
     <div>Perspectivas meramente ilustrativas. Valores, condições e disponibilidade sujeitos a alteração sem aviso prévio. Financiamento sujeito a análise e aprovação de crédito. Programa Minha Casa Minha Vida conforme regras vigentes da CAIXA. Consulte o memorial descritivo e o material oficial da incorporadora.</div>
-    <div>Página de divulgação operada por corretor parceiro — Imóveis Jornada. CRECI: [INSERIR CRECI].</div>
+    <div>Página de divulgação operada por corretor parceiro — Imóveis Jornada. CRECI: [INSERIR CRECI]. · <a href="politica-de-privacidade.html" style="color:#a8b0bc">Política de Privacidade</a></div>
   </div>
 </footer>
 
@@ -463,6 +718,22 @@ footer .wrap{display:grid;gap:14px}
 document.querySelectorAll('img[data-fbid]').forEach(function(img){
   img.addEventListener('error',function(){
     if(!img.dataset.fb){img.dataset.fb=1;img.src='https://drive.google.com/thumbnail?id='+img.dataset.fbid+'&sz=w1200';}
+  });
+});
+// Clique no card de tipologia: rola até o formulário e pré-seleciona a tipologia
+document.querySelectorAll('.tip-cta').forEach(function(a){
+  a.addEventListener('click',function(){
+    var sel=document.getElementById('tip1');
+    if(sel){
+      Array.from(sel.options).forEach(function(o){if(o.text===a.dataset.tip){sel.value=o.value||o.text;o.selected=true;}});
+    }
+  });
+});
+// Evento de lead nos formulários (dispara para GTM/Pixel quando configurados)
+document.querySelectorAll('.lead-form').forEach(function(f){
+  f.addEventListener('submit',function(){
+    if(window.dataLayer){dataLayer.push({event:'generate_lead',form_origin:f.querySelector('[name="Origem"]').value});}
+    if(window.fbq){fbq('track','Lead');}
   });
 });
 // Evento de clique WhatsApp (dispara para GTM/Pixel quando configurados)
