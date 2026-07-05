@@ -88,6 +88,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.92);backdrop-f
 .hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;background:var(--ink)}
 .hero::before{content:"";position:absolute;inset:0;background:url('https://lh3.googleusercontent.com/d/1_6OnPbAmGbPKwq4qw2uNq3MtlLoiziq9=w1920') center/cover no-repeat;opacity:.42}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,17,23,.25),rgba(13,17,23,.88) 78%)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
 .hero .wrap{position:relative;z-index:2;padding:90px 0 70px}
 .badge{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:40px;margin-bottom:20px}
 .hero h1{font-size:clamp(2rem,5.4vw,3.5rem);font-weight:900;max-width:800px}
@@ -317,6 +318,9 @@ footer .wrap{display:grid;gap:14px}
 
 <!-- HERO -->
 <section class="hero" id="topo">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://lh3.googleusercontent.com/d/1_6OnPbAmGbPKwq4qw2uNq3MtlLoiziq9=w1920" aria-hidden="true">
+    <source src="assets/drone-web.mp4" type="video/mp4">
+  </video>
   <div class="wrap">
     <span class="badge">Lançamento Cury · Centro do Rio</span>
     <h1>Pare de pagar aluguel no Rio. Seu apartamento no Centro <span>a partir de R$ 290 mil</span> — e já avaliado em R$ 350 mil.</h1>
