@@ -8,7 +8,7 @@ Landing page de alta conversão do lançamento **Saudosa Praça Onze (Cury)** �
 ## Como publicar (GitHub Pages)
 1. Envie os arquivos para `https://github.com/jorn4da/Praca-XI`.
 2. No repositório: **Settings → Pages → Branch: main / (root) → Save**.
-3. A página fica em `https://jorn4da.github.io/Praca-XI/`.
+3. A página fica em `https://curylançamento.com.br/`.
 
 ## Imagens
 As imagens são servidas direto do Google Drive (folder compartilhado do material Cury), com fallback automático para o thumbnail do Drive. Para máxima performance em produção, baixe as imagens do Drive para uma pasta `assets/`, comprima em WebP (ex.: squoosh.app) e troque as URLs no `index.html`.
