@@ -58,7 +58,7 @@
   // ---- Conversão do Google Ads (só se configurada) -----------------
   function adsConversion(label) {
     if (isSet(CONFIG.GOOGLE_ADS_ID) && isSet(label)) {
-      gtag('event', 'conversion', { send_to: CONFIG.GOOGLE_ADS_ID + '/' + label });
+      gtag('event', 'conversion', { send_to: CONFIG.GOOGLE_ADS_ID + '/' + label, transport_type: 'beacon' });
     }
   }
 
@@ -67,7 +67,8 @@
   window.CuryTrack = {
     // Clique em qualquer botão de WhatsApp
     whatsapp: function () {
-      gtag('event', 'whatsapp_click', { event_category: 'engagement' });
+      // beacon garante o envio mesmo quando o WhatsApp abre e sai da página
+      gtag('event', 'whatsapp_click', { event_category: 'engagement', transport_type: 'beacon' });
       adsConversion(CONFIG.ADS_LABEL_WHATSAPP);
     },
     // Envio do formulário (evento leve; a conversão firme é na página de obrigado)
