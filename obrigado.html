@@ -32,11 +32,14 @@ p{margin:16px auto 0;color:#d9dce1;max-width:460px}
 .micro{display:block;margin-top:12px;font-size:.78rem;color:#8a8f98}
 a.volta{display:inline-block;margin-top:26px;color:#8a8f98;font-size:.82rem}
 </style>
+<!-- ===== RASTREAMENTO — configure os IDs em /assets/tracking.js ===== -->
+<script src="/assets/tracking.js"></script>
 <script>
-// Evento de conversão (quando GTM/Pixel estiverem configurados)
+// Conversão de lead confirmado (envio de formulário concluído)
 window.addEventListener('load',function(){
   if(window.dataLayer){dataLayer.push({event:'lead_confirmado'});}
   if(window.fbq){fbq('track','CompleteRegistration');}
+  if(window.CuryTrack){CuryTrack.leadConfirmed();}
 });
 </script>
 </head>

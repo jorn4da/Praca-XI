@@ -28,10 +28,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
-<!-- ===== RASTREAMENTO (substituir IDs antes de rodar tráfego) =====
-<script>/* Google Tag Manager: GTM-XXXXXXX */</script>
-<script>/* Meta Pixel: XXXXXXXXXXXXXXX */</script>
-================================================================== -->
+<!-- ===== RASTREAMENTO — configure os IDs em /assets/tracking.js ===== -->
+<script src="/assets/tracking.js"></script>
 
 <!-- Schema.org -->
 <script type="application/ld+json">
@@ -812,8 +810,10 @@ document.querySelectorAll('.lead-form').forEach(function(f){
     if(tel && !TEL_RE.test(tel.value)){tel.classList.add('invalid');bad=bad||tel;}
     if(mail && !MAIL_RE.test(mail.value.trim())){mail.classList.add('invalid');bad=bad||mail;}
     if(bad){bad.focus();e.preventDefault();return;}
-    if(window.dataLayer){dataLayer.push({event:'generate_lead',form_origin:f.querySelector('[name="Origem"]').value});}
+    var _origem=f.querySelector('[name="Origem"]');
+    if(window.dataLayer){dataLayer.push({event:'generate_lead',form_origin:_origem?_origem.value:''});}
     if(window.fbq){fbq('track','Lead');}
+    if(window.CuryTrack){CuryTrack.lead(_origem?_origem.value:'');}
   });
 });
 // Evento de clique WhatsApp (dispara para GTM/Pixel quando configurados)
@@ -821,6 +821,7 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
   a.addEventListener('click',function(){
     if(window.dataLayer){dataLayer.push({event:'whatsapp_click'});}
     if(window.fbq){fbq('track','Contact');}
+    if(window.CuryTrack){CuryTrack.whatsapp();}
   });
 });
 </script>
