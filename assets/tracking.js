@@ -73,7 +73,8 @@
     },
     // Envio do formulário (evento leve; a conversão firme é na página de obrigado)
     lead: function (origin) {
-      gtag('event', 'generate_lead', { form_origin: origin || '' });
+      // evento de funil no envio; a conversao firme (generate_lead) dispara na pagina de obrigado
+      gtag('event', 'lead_form_submit', { form_origin: origin || '' });
     },
     // Página de obrigado (lead confirmado) — conversão principal do Google Ads
     leadConfirmed: function () {
