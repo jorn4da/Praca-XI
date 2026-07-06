@@ -13,7 +13,7 @@
    ===================================================================== */
 (function () {
   var CONFIG = {
-    GA4_ID:             'G-WGQJK3CQB7',
+    GA4_ID:             'G-0LHY05WGV6',
     GOOGLE_ADS_ID:      'AW-XXXXXXXXXX',
     ADS_LABEL_LEAD:     'XXXXXXXXXXXXXXXXX',
     ADS_LABEL_WHATSAPP: 'XXXXXXXXXXXXXXXXX',
