@@ -849,12 +849,20 @@ document.querySelectorAll('.lead-form').forEach(function(f){
     return '';
   }
   function buildText(origem){
+    // Emojis montados por código (ASCII na fonte) — evita qualquer problema de codificação
+    var E={
+      doc: String.fromCodePoint(0x1F4C4),
+      link:String.fromCodePoint(0x1F517),
+      pin: String.fromCodePoint(0x1F4CD),
+      casa:String.fromCodePoint(0x1F3E0),
+      graf:String.fromCodePoint(0x1F4CA)
+    };
     var linhas=['Olá! Vim pelo site do Saudosa Praça Onze e quero mais informações.'];
-    linhas.push('📄 Página: '+document.title.replace(/\s+/g,' ').trim());
-    linhas.push('🔗 URL: '+window.location.hostname+window.location.pathname);
-    if(origem){linhas.push('📍 Cliquei em: '+origem);}
-    var tip=getTipologia(); if(tip){linhas.push('🏠 Tipologia de interesse: '+tip);}
-    var utm=getUTMs(); if(utm){linhas.push('📊 Campanha: '+utm);}
+    linhas.push(E.doc+' Página: '+document.title.replace(/\s+/g,' ').trim());
+    linhas.push(E.link+' URL: '+window.location.hostname+window.location.pathname);
+    if(origem){linhas.push(E.pin+' Cliquei em: '+origem);}
+    var tip=getTipologia(); if(tip){linhas.push(E.casa+' Tipologia de interesse: '+tip);}
+    var utm=getUTMs(); if(utm){linhas.push(E.graf+' Campanha: '+utm);}
     return linhas.join('\n');
   }
   function refresh(a){
